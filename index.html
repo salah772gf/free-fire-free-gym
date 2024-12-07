@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Fire Rewards</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Free Fire Rewards</h1>
+        <div class="points">
+            نقاطك: <span id="points">0</span>
+        </div>
+    </header>
+    <main>
+        <section id="home" class="section active">
+            <div class="content">
+                <h2>مرحبًا بك في Free Fire Rewards!</h2>
+                <p>شاهد الإعلانات، اكسب النقاط، واحصل على مجوهرات فري فاير.</p>
+                <button onclick="navigateTo('ads')" class="btn">ابدأ بمشاهدة الإعلانات</button>
+                <button onclick="navigateTo('store')" class="btn">انتقل إلى المتجر</button>
+            </div>
+        </section>
+        <section id="ads" class="section">
+            <div class="content">
+                <h2>اكسب نقاطًا من خلال مشاهدة الإعلانات</h2>
+                <p>اضغط على الإعلان للحصول على نقاط.</p>
+                <button onclick="watchAd(10)" class="btn">شاهد الإعلان (10 نقاط)</button>
+                <button onclick="watchAd(20)" class="btn">شاهد الإعلان (20 نقاط)</button>
+                <button onclick="watchAd(30)" class="btn">شاهد الإعلان (30 نقاط)</button>
+                <button onclick="navigateTo('home')" class="btn btn-home">العودة إلى الصفحة الرئيسية</button>
+
+            </div>
+        </section>
+        <section id="store" class="section">
+            <div class="content">
+                <h2>استبدل نقاطك</h2>
+                <p>استخدم نقاطك للحصول على مجوهرات فري فاير.</p>
+                <div class="store-items">
+                    <div class="store-item">
+                        <h3>50 مجوهرات</h3>
+                        <p>التكلفة: 100 نقاط</p>
+                        <button onclick="redeemReward(100, '50 مجوهرات')" class="btn">استبدال</button>
+                    </div>
+                    <div class="store-item">
+                        <h3>100 مجوهرات</h3>
+                        <p>التكلفة: 200 نقاط</p>
+                        <button onclick="redeemReward(200, '100 مجوهرات')" class="btn">استبدال</button>
+                    </div>
+                    <div class="store-item">
+                        <h3>200 مجوهرات</h3>
+                        <p>التكلفة: 400 نقاط</p>
+                        <button onclick="redeemReward(400, '200 مجوهرات')" class="btn">استبدال</button>
+                    </div>
+                </div>
+                <button onclick="navigateTo('home')" class="btn btn-home">العودة إلى الصفحة الرئيسية</button>
+
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
